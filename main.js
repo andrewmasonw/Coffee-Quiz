@@ -1,3 +1,6 @@
+$(document).ready(function(){
+    console.log("connected");
+})
 document.getElementById("form").onsubmit = function() {
 
         // Find the users name
