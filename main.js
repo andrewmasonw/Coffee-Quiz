@@ -52,7 +52,7 @@ $("#wf-form-quizForm").submit(()=>{
             "<br><br>" + " This lot is of grade AA, which is of screen size 17+. If you're a fan of acidity, this coffee is up your alley. Kenyans are known for their sparkling acidity, explosive aromas and lingering aftertaste and this coffee is true to it’s origin, which makes this coffee shine in your cup!",
             price: "19.00",
             img: "https://images.squarespace-cdn.com/content/v1/5b35406150a54fbd72663d20/1618078117887-EFZ13FW2EFI528J6E37G/Giraldo+-+5.jpeg?format=750w",
-            url: "https://www.weatheredhandscoffee.com/coffee/guatemala-bella-carmona",
+            url: "https://www.weatheredhandscoffee.com/coffee/kenya-kainamui",
         }, {
             name: "Marilandia SWP Decaf",
             origin: "Guatemala",
@@ -62,7 +62,7 @@ $("#wf-form-quizForm").submit(()=>{
             flavorProfile: "Chocolate, Caramel, Stone fruit",
             story: "José Bernabé Martínez is a first generation coffee producer, from a large family of farmers cultivating other crops. In fact, he himself grows lemons, bananas, oranges, and avocados on the farm. Hovering around a very spry eighty years old, he manages his steep ridgeline farm with the support of his son José Martinez. <br> <br> When his mother died in 1980, he inherited a bit of land and began planting coffee himself. Over many years as prices improved, he turned profits to purchasing neighboring lots. He has had the pride of teaching his children everything he knows about coffee and farming, and they now support the harvest.",
             price: "16.00",
-            img: "https://images.squarespace-cdn.com/content/v1/5b35406150a54fbd72663d20/1629838569344-S8ICKMES3X16WNRL1DOH/6A914E74-7031-41D3-A935-3197F554C9C0_1_201_a.jpeg?format=1500w",
+            img: "https://images.squarespace-cdn.com/content/v1/5b35406150a54fbd72663d20/1630506215971-T78FLQTX1Z6IDP6PSRDC/Kainamui_Img1.jpg?format=1500w",
             url: "https://www.weatheredhandscoffee.com/coffee/guatemala-marilandia-swp-decaf",
         }];
 
