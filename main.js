@@ -1,9 +1,9 @@
 $(document).ready(function(){
     console.log("connected");
 })
-document.getElementById("form").onsubmit = function() {
 
-        // Find the users name
+$("#quiz").submit(()=>{
+    // Find the users name
         let name = $("#yourName").val();
         let nameInt = name.length;
 
@@ -164,4 +164,4 @@ document.getElementById("form").onsubmit = function() {
         }
 
         return false // Needed so page will not refresh on submit
-    } // End Submit Function
+})
