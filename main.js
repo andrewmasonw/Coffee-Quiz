@@ -1,7 +1,3 @@
-$(document).ready(function(){
-    console.log("connected");
-})
-
 $("#quiz").submit(()=>{
     // Find the users name
         let name = $("#yourName").val();
