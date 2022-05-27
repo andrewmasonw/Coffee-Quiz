@@ -2,7 +2,7 @@ $("#quizForm").submit(()=>{
     // Find the users name
         let name = $("#yourName").val();
         let nameInt = name.length;
-        console.log(name);
+        console.log("name: " + name);
 
         if (nameInt === 0) {
             alert("Please enter a name") //Name Validation
@@ -16,6 +16,7 @@ $("#quizForm").submit(()=>{
         let a5 = parseInt($('input[name = "flavor"]:checked').val());
 
         var score = (a1 + a2 + a3 + a4 + a5);
+        console.log("score: " + score)
 
         // Possible Answers
         var coffee = [{
@@ -67,7 +68,7 @@ $("#quizForm").submit(()=>{
         //If user drinks decaf, suggestion = decaf coffee
 
         if (a2 == "5") {
-
+            console.log("user selected Decaf coffee")
             let activeCoffee = coffee[3];
             console.log(activeCoffee.name);
             $("[successMSG=coffeeName]").replaceWith(activeCoffee.name);
@@ -80,8 +81,8 @@ $("#quizForm").submit(()=>{
             $("#successURL").attr("href", activeCoffee.url);
             $("#userName").replaceWith(name);
         } else {
-            if (score >= 31 && score <= 54) {
-
+            if (score >= 30 && score <= 54) {
+            console.log("users score was between 30 & 54")
             let activeCoffee = coffee[2];
             $("[successMSG=coffeeName]").replaceWith(activeCoffee.name);
             $("#successOrigin").replaceWith(activeCoffee.origin);
