@@ -10,10 +10,15 @@ $("#quizForm").submit(()=>{
         }
 
         let a1 = parseInt($('input[name = "method"]:checked').val());
+        console.log("answer 1: " + a1);
         let a2 = parseInt($('input[name = "how"]:checked').val());
+        console.log("answer 2: " + a2);
         let a3 = parseInt($('select[name = "cups"]').val());
+        console.log("answer 3: " + a3);
         let a4 = parseInt($('input[name = "light-dark"]:checked').val());
+        console.log("answer 4: " + a4);
         let a5 = parseInt($('input[name = "flavor"]:checked').val());
+        console.log("answer 5: " + a5);
 
         var score = (a1 + a2 + a3 + a4 + a5);
         console.log("score: " + score)
