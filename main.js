@@ -68,19 +68,15 @@ $(".quizForm").submit(()=>{
         if (a2 == "5") {
 
             let activeCoffee = coffee[3];
-            $("#successName").replaceWith(activeCoffee.name);
+            $("#successCoffee").replaceWith(activeCoffee.name);
             $("#successOrigin").replaceWith(activeCoffee.origin);
             $("#successElevation").replaceWith(activeCoffee.elevation);
             $("#successFlavorProfile").replaceWith(activeCoffee.flavorProfile);
             $("#successPrice").replaceWith(activeCoffee.price);
-            $("#successStory").replaceWith(activeCoffee.story);
+            $("#successStory").replaceWith("<p class='story'>" + activeCoffee.story + "</p>");
             $("#successIMG").attr("src", activeCoffee.img);
             $("#successURL").attr("href", activeCoffee.url);
-
-            //success greeting
             $("#userName").replaceWith(name);
-            //document.getElementById("success-heading").innerHTML = "We thought that " + activeCoffee.name + " from Weathered Hands Farmhouse Coffee would be best for you.";
-            $("#successCoffee").replaceWith(activeCoffee.name);
         } else {
             if (score >= 31 && score <= 54) {
 
