@@ -2,7 +2,6 @@ $("#wf-form-quizForm").submit(()=>{
     // Find the users name
         let name = $("#yourName").val();
         let nameInt = name.length;
-        console.log("name: " + name);
 
         if (nameInt === 0) {
             alert("Please enter a name") //Name Validation
@@ -10,18 +9,12 @@ $("#wf-form-quizForm").submit(()=>{
         }
 
         let a1 = parseInt($('input[name = "method"]:checked').val());
-        console.log("answer 1: " + a1);
         let a2 = parseInt($('input[name = "how"]:checked').val());
-        console.log("answer 2: " + a2);
         let a3 = parseInt($('select[name = "cups"]').val());
-        console.log("answer 3: " + a3);
         let a4 = parseInt($('input[name = "roast"]:checked').val());
-        console.log("answer 4: " + a4);
         let a5 = parseInt($('input[name = "flavor"]:checked').val());
-        console.log("answer 5: " + a5);
 
         var score = (a1 + a2 + a3 + a4 + a5);
-        console.log("score: " + score)
 
         // Possible Answers
         var coffee = [{
@@ -47,13 +40,16 @@ $("#wf-form-quizForm").submit(()=>{
             img: "https://images.squarespace-cdn.com/content/v1/5b35406150a54fbd72663d20/1645718794714-PQWNBTJX4GVIKA40AQEZ/Blend.jpg?format=750w",
             url: "https://weatheredhandscoffee.com/coffee/the-farmstead",
         }, {
-            name: "La Sierrita",
-            origin: "Antioquia, Columbia",
+            name: "Kainamui",
+            origin: "Kenya",
             singleOrigin: "Single Origin",
-            process: "Washed & Greenhouse Dried",
-            elevation: "2000m",
-            flavorProfile: "Tangarine, Plum, Nougat",
-            story: "La Sierrita is comprised of lots from multiple producers in Giraldo, Antioquia, Colombia. The producers who contributed to this lot grow Caturra, Colombia, and Castillo. This communal lot is carefully constructed, with every single small lot individually cupped various times before being included within the main lot. In addition to cup quality, each coffee must meet strict physical requirements, including guidelines for moisture content and water activity. <br> <br> Antioquia is the 2nd largest producer of coffee in Colombia, next to Huila, but many would never know it as it doesn’t have the same fame as other regions such as Huila, Nariño or Cauca. The reason is because it is primarily comprised of large-scale farmers who are focused more on volumes than on quality. However, there are a few regions within the state where small holders produce coffees that can easily compete on the cupping table, next to any other region in Colombia. Giraldo is one of those under appreciated regions!",
+            process: "Washed",
+            elevation: "1650m",
+            flavorProfile: "Black Current, Grapefruit, and Molasses",
+            story: "Kainamui Coffee Factory was established on the slopes of Mount Kenya in 1963 and is part of the New Ngariama Cooperative. It is situated in the Ngariama location, Gichugu division of Kirinyaga County. With ideal conditions for coffee growing, farmers benefit from the mineral-rich, red volcanic loam soils and an elevation of 1650 meters above sea level." + 
+            "<br><br>" + "The factory has partnered with Coffee Management Services (CMS), for its agronomical ventures. The long term goal is to increase coffee production through farmer training, ready access to inputs, Good Agricultural Practice seminars, and providing updated printed materials on sustainable farming." +
+            "<br><br>" + "Most coffee producers in Kenya are 'smallholders'. Each producer's total volume might only be a few bags, thus hundreds of farmers, when living in the same area, are likely to be members of a cooperative, which markets and sells coffee on the whole community’s behalf. Each cooperative typically runs several “factories” (i.e. processing and washing stations) where producers deliver cherries from their farms. Sometimes a producer chooses to deliver to the closest factory but some prefer delivering to a different factory, due to differing management practices. The usual reason for choosing one factory over another is based on the prices a given factory manages to obtain for its cherries." +
+            "<br><br>" + " This lot is of grade AA, which is of screen size 17+. If you're a fan of acidity, this coffee is up your alley. Kenyans are known for their sparkling acidity, explosive aromas and lingering aftertaste and this coffee is true to it’s origin, which makes this coffee shine in your cup!",
             price: "19.00",
             img: "https://images.squarespace-cdn.com/content/v1/5b35406150a54fbd72663d20/1618078117887-EFZ13FW2EFI528J6E37G/Giraldo+-+5.jpeg?format=750w",
             url: "https://www.weatheredhandscoffee.com/coffee/guatemala-bella-carmona",
@@ -73,9 +69,8 @@ $("#wf-form-quizForm").submit(()=>{
         //If user drinks decaf, suggestion = decaf coffee
 
         if (a2 == "5") {
-            console.log("user selected Decaf coffee")
+
             let activeCoffee = coffee[3];
-            console.log(activeCoffee.name);
             $("[successMSG=coffeeName]").replaceWith(activeCoffee.name);
             $("#successOrigin").replaceWith(activeCoffee.origin);
             $("#successElevation").replaceWith(activeCoffee.elevation);
@@ -87,7 +82,7 @@ $("#wf-form-quizForm").submit(()=>{
             $("#userName").replaceWith(name);
         } else {
             if (score >= 30 && score <= 54) {
-            console.log("users score was between 30 & 54")
+
             let activeCoffee = coffee[2];
             $("[successMSG=coffeeName]").replaceWith(activeCoffee.name);
             $("#successOrigin").replaceWith(activeCoffee.origin);
@@ -128,6 +123,4 @@ $("#wf-form-quizForm").submit(()=>{
             $("#userName").replaceWith(name);
             }
         }
-
-        //return false // Needed so page will not refresh on submit
 })
