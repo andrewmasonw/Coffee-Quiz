@@ -2,6 +2,7 @@ $(".quizForm").submit(()=>{
     // Find the users name
         let name = $("#yourName").val();
         let nameInt = name.length;
+        console.log(name);
 
         if (nameInt === 0) {
             alert("Please enter a name") //Name Validation
