@@ -103,7 +103,7 @@ $("#wf-form-quizForm").submit(()=>{
             if (score >= 55 && score <= 77) {
 
             let activeCoffee = coffee[1];
-            $("#successCoffee").replaceWith(activeCoffee.name);
+            $("[successMSG=coffeeName]").replaceWith(activeCoffee.name);
             $("#successOrigin").replaceWith(activeCoffee.origin);
             $("#successElevation").replaceWith(activeCoffee.elevation);
             $("#successFlavorProfile").replaceWith(activeCoffee.flavorProfile);
@@ -117,7 +117,7 @@ $("#wf-form-quizForm").submit(()=>{
             if (score >= 78 && score <= 100) {
 
             let activeCoffee = coffee[0];
-            $("#successCoffee").replaceWith(activeCoffee.name);
+            $("[successMSG=coffeeName]").replaceWith(activeCoffee.name);
             $("#successOrigin").replaceWith(activeCoffee.origin);
             $("#successElevation").replaceWith(activeCoffee.elevation);
             $("#successFlavorProfile").replaceWith(activeCoffee.flavorProfile);
