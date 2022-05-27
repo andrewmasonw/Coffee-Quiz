@@ -68,7 +68,8 @@ $(".quizForm").submit(()=>{
         if (a2 == "5") {
 
             let activeCoffee = coffee[3];
-            $("#successCoffee").replaceWith(activeCoffee.name);
+            console.log(activeCoffee.name);
+            $("[successMSG=coffeeName]").replaceWith(activeCoffee.name);
             $("#successOrigin").replaceWith(activeCoffee.origin);
             $("#successElevation").replaceWith(activeCoffee.elevation);
             $("#successFlavorProfile").replaceWith(activeCoffee.flavorProfile);
@@ -81,7 +82,7 @@ $(".quizForm").submit(()=>{
             if (score >= 31 && score <= 54) {
 
             let activeCoffee = coffee[2];
-            $("#successCoffee").replaceWith(activeCoffee.name);
+            $("[successMSG=coffeeName]").replaceWith(activeCoffee.name);
             $("#successOrigin").replaceWith(activeCoffee.origin);
             $("#successElevation").replaceWith(activeCoffee.elevation);
             $("#successFlavorProfile").replaceWith(activeCoffee.flavorProfile);
