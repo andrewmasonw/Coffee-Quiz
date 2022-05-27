@@ -84,10 +84,9 @@ $("#submitButton").click(()=>{
             $("#successURL").attr("href", activeCoffee.url);
 
             //success greeting
-            //document.getElementById("name").innerHTML = "Thanks for taking our quiz, " + name + "!";
             $("#userName").replaceWith(name);
-            document.getElementById("success-heading").innerHTML = "We thought that " + activeCoffee.name + " from Weathered Hands Farmhouse Coffee would be best for you.";
-            $("#success-heading").replaceWith(activeCoffee.name);
+            //document.getElementById("success-heading").innerHTML = "We thought that " + activeCoffee.name + " from Weathered Hands Farmhouse Coffee would be best for you.";
+            $("#successCoffee").replaceWith(activeCoffee.name);
         } else {
             if (score >= 31 && score <= 54) {
                 //hide quiz
@@ -101,15 +100,14 @@ $("#submitButton").click(()=>{
             $("#successElevation").replaceWith(activeCoffee.elevation);
             $("#successFlavorProfile").replaceWith(activeCoffee.flavorProfile);
             $("#successPrice").replaceWith(activeCoffee.price);
-            $("#successStory").replaceWith(activeCoffee.story);
+            $("#successStory").replaceWith("<p class='story'>" + activeCoffee.story + "</p>");
             $("#successIMG").attr("src", activeCoffee.img);
             $("#successURL").attr("href", activeCoffee.url);
 
             //success greeting
-            //document.getElementById("name").innerHTML = "Thanks for taking our quiz, " + name + "!";
             $("#userName").replaceWith(name);
-            document.getElementById("success-heading").innerHTML = "We thought that " + activeCoffee.name + " from Weathered Hands Farmhouse Coffee would be best for you.";
-            $("#success-heading").replaceWith(activeCoffee.name);
+            //document.getElementById("success-heading").innerHTML = "We thought that " + activeCoffee.name + " from Weathered Hands Farmhouse Coffee would be best for you.";
+            $("#successCoffee").replaceWith(activeCoffee.name);
             }
 
             if (score >= 55 && score <= 77) {
@@ -129,10 +127,9 @@ $("#submitButton").click(()=>{
             $("#successURL").attr("href", activeCoffee.url);
 
             //success greeting
-            //document.getElementById("name").innerHTML = "Thanks for taking our quiz, " + name + "!";
             $("#userName").replaceWith(name);
-            document.getElementById("success-heading").innerHTML = "We thought that " + activeCoffee.name + " from Weathered Hands Farmhouse Coffee would be best for you.";
-            $("#success-heading").replaceWith(activeCoffee.name);
+            //document.getElementById("success-heading").innerHTML = "We thought that " + activeCoffee.name + " from Weathered Hands Farmhouse Coffee would be best for you.";
+            $("#successCoffee").replaceWith(activeCoffee.name);
             }
 
             if (score >= 78 && score <= 100) {
@@ -153,10 +150,9 @@ $("#submitButton").click(()=>{
             $("#successURL").attr("href", activeCoffee.url);
 
             //success greeting
-            //document.getElementById("name").innerHTML = "Thanks for taking our quiz, " + name + "!";
             $("#userName").replaceWith(name);
-            document.getElementById("success-heading").innerHTML = "We thought that " + activeCoffee.name + " from Weathered Hands Farmhouse Coffee would be best for you.";
-            $("#success-heading").replaceWith(activeCoffee.name);
+            //document.getElementById("success-heading").innerHTML = "We thought that " + activeCoffee.name + " from Weathered Hands Farmhouse Coffee would be best for you.";
+            $("#successCoffee").replaceWith(activeCoffee.name);
             }
         }
 
