@@ -1,8 +1,7 @@
-$("#quizForm").submit(()=>{
+$(".quizForm").submit(()=>{
     // Find the users name
         let name = $("#yourName").val();
         let nameInt = name.length;
-        console.log(name)
 
         if (nameInt === 0) {
             alert("Please enter a name") //Name Validation
@@ -52,16 +51,16 @@ $("#quizForm").submit(()=>{
             img: "https://images.squarespace-cdn.com/content/v1/5b35406150a54fbd72663d20/1618078117887-EFZ13FW2EFI528J6E37G/Giraldo+-+5.jpeg?format=750w",
             url: "https://www.weatheredhandscoffee.com/coffee/guatemala-bella-carmona",
         }, {
-            name: "Las Montanas EA Decaf",
-            origin: "Colombia",
+            name: "Marilandia SWP Decaf",
+            origin: "Guatemala",
             singleOrigin: "Single Origin",
             process: "Decaf",
-            elevation: "",
-            flavorProfile: "Milk Chocolate, Almond, Brown Sugar",
-            story: "The Sugarcane EA Decaffeination Process removes 97% of all caffeine originally present within green coffee.  Ethyl Acetate (EA) is a naturally occuring compound and solvent derived through the fermentation of sugarcane.  ",
+            elevation: "1650m",
+            flavorProfile: "Chocolate, Caramel, Stone fruit",
+            story: "José Bernabé Martínez is a first generation coffee producer, from a large family of farmers cultivating other crops. In fact, he himself grows lemons, bananas, oranges, and avocados on the farm. Hovering around a very spry eighty years old, he manages his steep ridgeline farm with the support of his son José Martinez. <br> When his mother died in 1980, he inherited a bit of land and began planting coffee himself. Over many years as prices improved, he turned profits to purchasing neighboring lots. He has had the pride of teaching his children everything he knows about coffee and farming, and they now support the harvest.",
             price: "16.00",
-            img: "https://images.squarespace-cdn.com/content/v1/5b35406150a54fbd72663d20/1564544180200-1N46YKZ4U1JBW4IRGTLI/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/_MG_3931.jpg?format=1000w",
-            url: "https://www.weatheredhandscoffee.com/coffee/las-montanas-ea-decaf",
+            img: "https://images.squarespace-cdn.com/content/v1/5b35406150a54fbd72663d20/1629838569344-S8ICKMES3X16WNRL1DOH/6A914E74-7031-41D3-A935-3197F554C9C0_1_201_a.jpeg?format=1500w",
+            url: "https://www.weatheredhandscoffee.com/coffee/guatemala-marilandia-swp-decaf",
         }];
 
         //If user drinks decaf, suggestion = decaf coffee
@@ -86,7 +85,7 @@ $("#quizForm").submit(()=>{
             if (score >= 31 && score <= 54) {
 
             let activeCoffee = coffee[2];
-            $("#successName").replaceWith(activeCoffee.name);
+            $("#successCoffee").replaceWith(activeCoffee.name);
             $("#successOrigin").replaceWith(activeCoffee.origin);
             $("#successElevation").replaceWith(activeCoffee.elevation);
             $("#successFlavorProfile").replaceWith(activeCoffee.flavorProfile);
@@ -94,47 +93,35 @@ $("#quizForm").submit(()=>{
             $("#successStory").replaceWith("<p class='story'>" + activeCoffee.story + "</p>");
             $("#successIMG").attr("src", activeCoffee.img);
             $("#successURL").attr("href", activeCoffee.url);
-
-            //success greeting
             $("#userName").replaceWith(name);
-            //document.getElementById("success-heading").innerHTML = "We thought that " + activeCoffee.name + " from Weathered Hands Farmhouse Coffee would be best for you.";
-            $("#successCoffee").replaceWith(activeCoffee.name);
             }
 
             if (score >= 55 && score <= 77) {
 
             let activeCoffee = coffee[1];
-            $("#successName").replaceWith(activeCoffee.name);
+            $("#successCoffee").replaceWith(activeCoffee.name);
             $("#successOrigin").replaceWith(activeCoffee.origin);
             $("#successElevation").replaceWith(activeCoffee.elevation);
             $("#successFlavorProfile").replaceWith(activeCoffee.flavorProfile);
             $("#successPrice").replaceWith(activeCoffee.price);
-            $("#successStory").replaceWith(activeCoffee.story);
+            $("#successStory").replaceWith("<p class='story'>" + activeCoffee.story + "</p>");
             $("#successIMG").attr("src", activeCoffee.img);
             $("#successURL").attr("href", activeCoffee.url);
-
-            //success greeting
             $("#userName").replaceWith(name);
-            //document.getElementById("success-heading").innerHTML = "We thought that " + activeCoffee.name + " from Weathered Hands Farmhouse Coffee would be best for you.";
-            $("#successCoffee").replaceWith(activeCoffee.name);
             }
 
             if (score >= 78 && score <= 100) {
 
             let activeCoffee = coffee[0];
-            $("#successName").replaceWith(activeCoffee.name);
+            $("#successCoffee").replaceWith(activeCoffee.name);
             $("#successOrigin").replaceWith(activeCoffee.origin);
             $("#successElevation").replaceWith(activeCoffee.elevation);
             $("#successFlavorProfile").replaceWith(activeCoffee.flavorProfile);
             $("#successPrice").replaceWith(activeCoffee.price);
-            $("#successStory").replaceWith(activeCoffee.story);
+            $("#successStory").replaceWith("<p class='story'>" + activeCoffee.story + "</p>");
             $("#successIMG").attr("src", activeCoffee.img);
             $("#successURL").attr("href", activeCoffee.url);
-
-            //success greeting
             $("#userName").replaceWith(name);
-            //document.getElementById("success-heading").innerHTML = "We thought that " + activeCoffee.name + " from Weathered Hands Farmhouse Coffee would be best for you.";
-            $("#successCoffee").replaceWith(activeCoffee.name);
             }
         }
 
