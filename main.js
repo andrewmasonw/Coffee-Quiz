@@ -1,4 +1,4 @@
-$(".quizForm").submit(()=>{
+$("#quizForm").submit(()=>{
     // Find the users name
         let name = $("#yourName").val();
         let nameInt = name.length;
