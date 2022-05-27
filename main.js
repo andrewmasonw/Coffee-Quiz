@@ -1,4 +1,4 @@
-$("#quiz").submit(()=>{
+$("#quizForm").submit(()=>{
     // Find the users name
         let name = $("#yourName").val();
         let nameInt = name.length;
@@ -68,11 +68,6 @@ $("#quiz").submit(()=>{
 
         if (a2 == "5") {
 
-            //hide quiz
-            $("#form").css("display", "none");
-            //show success msg
-            $("#successContainer").css("display", "block");
-
             let activeCoffee = coffee[3];
             $("#successName").replaceWith(activeCoffee.name);
             $("#successOrigin").replaceWith(activeCoffee.origin);
@@ -89,10 +84,6 @@ $("#quiz").submit(()=>{
             $("#successCoffee").replaceWith(activeCoffee.name);
         } else {
             if (score >= 31 && score <= 54) {
-                //hide quiz
-            $("#form").css("display", "none");
-            //show success msg
-            $("#successContainer").css("display", "block");
 
             let activeCoffee = coffee[2];
             $("#successName").replaceWith(activeCoffee.name);
@@ -111,10 +102,6 @@ $("#quiz").submit(()=>{
             }
 
             if (score >= 55 && score <= 77) {
-               //hide quiz
-            $("#form").css("display", "none");
-            //show success msg
-            $("#successContainer").css("display", "block");
 
             let activeCoffee = coffee[1];
             $("#successName").replaceWith(activeCoffee.name);
@@ -134,11 +121,6 @@ $("#quiz").submit(()=>{
 
             if (score >= 78 && score <= 100) {
 
-                //hide quiz
-            $("#form").css("display", "none");
-            //show success msg
-            $("#successContainer").css("display", "block");
-
             let activeCoffee = coffee[0];
             $("#successName").replaceWith(activeCoffee.name);
             $("#successOrigin").replaceWith(activeCoffee.origin);
@@ -156,5 +138,5 @@ $("#quiz").submit(()=>{
             }
         }
 
-        return false // Needed so page will not refresh on submit
+        //return false // Needed so page will not refresh on submit
 })
