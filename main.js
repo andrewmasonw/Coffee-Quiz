@@ -15,7 +15,7 @@ $("#wf-form-quizForm").submit(()=>{
         console.log("answer 2: " + a2);
         let a3 = parseInt($('select[name = "cups"]').val());
         console.log("answer 3: " + a3);
-        let a4 = parseInt($('input[name = "light-dark"]:checked').val());
+        let a4 = parseInt($('input[name = "roast"]:checked').val());
         console.log("answer 4: " + a4);
         let a5 = parseInt($('input[name = "flavor"]:checked').val());
         console.log("answer 5: " + a5);
